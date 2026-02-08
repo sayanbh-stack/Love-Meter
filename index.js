@@ -29,6 +29,11 @@ function resize() {
 }
 window.addEventListener('resize', resize);
 
+function playMusic() {
+        var audio = document.getElementById("bg-music");
+        audio.muted = false; // Unmute the audio
+        audio.play(); // Start playback
+    }
 // Player Object
 class Player {
     constructor() {
@@ -238,6 +243,7 @@ function startGame() {
     startScreen.classList.add('hidden');
 
     updateGame();
+    playMusic();
 }
 
 // Event Listeners
